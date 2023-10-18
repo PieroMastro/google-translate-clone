@@ -4,7 +4,8 @@ module.exports = {
         "es2021": true
     },
     "extends": [
-        "standard-with-typescript",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
         "plugin:react/recommended"
     ],
     "overrides": [
@@ -20,14 +21,16 @@ module.exports = {
             }
         }
     ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
-        "sourceType": "module",
-        "poject": "./tsconfig.json"
+        "sourceType": "module"
     },
     "plugins": [
+        "@typescript-eslint",
         "react"
     ],
     "rules": {
+        'react/react-in-jsx-scope': 'off'
     }
 }
